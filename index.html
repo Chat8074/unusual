@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heloo Miss!!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Virtual Puzzle for the cat queen</h1>
+        <p>Solve the puzzle to reveal a special message.</p>
+        
+        <!-- Stage 1: Riddle with Checkbox -->
+        <div id="stage1">
+            <p>Stage 1: I have keys but open no locks, I have space but no room. What am I?</p>
+            <input type="text" id="answer1">
+            <button onclick="checkAnswer1()">Submit</button>
+            <div id="lineTypesCheckbox1">
+                <input type="checkbox" id="lineTypesCheckbox1" onchange="showLineTypesMessage1()">
+                <label for="lineTypesCheckbox1">Click here to reveal a message</label>
+                <p id="lineTypesMessage1" style="display:none;">You are holding it!!</p>
+            </div>
+        </div>
+
+        <!-- Stage 2: Hidden Message with Checkbox -->
+        <div id="stage2" style="display:none;">
+            <p>Stage 2: Find the hidden message in this text:</p>
+            <p style="text-align: left;">
+                Slrem ipsum dolor sit amet, consectetur adipiscing elim.<br>
+                aovamus lacinia odio vitae vestibulum vestibulum.<br>
+                yvas venenatis euismod malesuada. Say.<br>
+                mellam vehicula ipsum a arcu cursus vitae congue.<br>
+                eUrabitur nec mauris ipsum. Suspendisse potenti.<br>
+                Ihasellus euismod ante a malesuada commodo.
+            </p>
+            <input type="text" id="answer2">
+            <button onclick="checkAnswer2()">Submit</button>
+            <div id="lineTypesCheckbox2">
+                <input type="checkbox" id="lineTypesCheckbox2" onchange="showLineTypesMessage2()">
+                <label for="lineTypesCheckbox2">Click here to reveal a message</label>
+                <p id="lineTypesMessage2" style="display:none;">How many types of lines are there what are they?</p>
+            </div>
+        </div>
+
+        <!-- Remaining Stages -->
+        <div id="stage3" style="display:none;">
+            <p>What do you love?</p>
+            <input type="text" id="answer3">
+            <button onclick="checkAnswer3()">Submit</button>
+        </div>
+
+        <div id="stage4" style="display:none;">
+            <p>Stage 4: Enter your email to receive the hexadecimal code.</p>
+            <input type="email" id="email" placeholder="Enter your email">
+            <button onclick="sendEmail()">Send Email</button>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
